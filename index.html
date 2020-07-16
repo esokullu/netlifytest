@@ -4,9 +4,9 @@
 <script>
 function show(t) {
         document.getElementById('myauth').style.display="none";
-                document.getElementById('myforum').style.display="none";
-                document.getElementById('myblog').style.display="none";
-                        document.getElementById('my'+t).style.display="block";
+        document.getElementById('myforum').style.display="none";
+        document.getElementById('myblog').style.display="none";
+        document.getElementById('my'+t).style.display="block";
 }
 </script>
 </head>
@@ -17,7 +17,7 @@ function show(t) {
 
         <p>[ <a href="javascript:void(show('auth'))">Auth</a> ] &nbsp; [ <a href="javascript:void(show('blog'))">Blog</a> ] &nbsp; [ <a href="javascript:void(show('forum'))">Forum</a> ]</p>
 
-        <div id="myauth" style="display:none">
+        <div id="myauth" style="display:block">
         <graphjs-auth></graphjs-auth>
         </div>
 
