@@ -1,19 +1,33 @@
 <html>
 <head>
 <script src="https://graphjs.com/v2/graph.js"></script>
-
+<script>
+function show(t) {
+        document.getElementById('myauth').style.display="none";
+                document.getElementById('myforum').style.display="none";
+                document.getElementById('myblog').style.display="none";
+                        document.getElementById('my'+t).style.display="block";
+}
+</script>
 </head>
 <body>
 
 <h1>Netlify+GraphJS Test</h1>
 <p>Edit the source code at https://github.com/esokullu/netlifytest</p>
-        
-<hr />
+
+        <p>[ <a href="javascript:void(show('auth'))">Auth</a> ] &nbsp; [ <a href="javascript:void(show('blog'))">Blog</a> ] &nbsp; [ <a href="javascript:void(show('forum'))">Forum</a> ]</p>
+
+        <div id="myauth" style="display:none">
         <graphjs-auth></graphjs-auth>
-<hr />
+        </div>
+
+        <div id="myblog" style="display:none">
         <graphjs-blog></graphjs-blog>
-<hr />
+        </div>
+
+        <div id="myforum" style="display:none">
         <graphjs-forum></graphjs-forum>
+        </div>        
         
 <script>
 GraphJS.init("1170D714-CC3C-4D52-B372-63742A498258", {
